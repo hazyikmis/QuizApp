@@ -8,6 +8,9 @@ import { QuestionCard } from "./components/QuestionCard";
 // types
 import { Difficulty, QuestionState } from "./API";
 
+// styles
+import { GlobalStyle, Wrapper } from "./App.styles";
+
 export type AnswerObject = {
   question: string;
   answer: string;
@@ -85,34 +88,39 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <h1>Trivial Quizzz</h1>
-      {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
-        <button className="start" onClick={startTrivia}>
-          Start
-        </button>
-      ) : null}
-      {!gameOver && <p className="score">Score:{score}</p>}
-      {loading && <p>Loading Questions...</p>}
-      {!loading && !gameOver && (
-        <QuestionCard
-          questionNr={currentQuestionNr + 1}
-          totalQuestions={TOTAL_QUESTIONS}
-          question={questions[currentQuestionNr].question}
-          answers={questions[currentQuestionNr].answers} //correct_answer + incorrect_answers
-          userAnswer={userAnswers ? userAnswers[currentQuestionNr] : undefined}
-          callback={checkAnswer}
-        />
-      )}
-      {!gameOver &&
-      !loading &&
-      userAnswers.length === currentQuestionNr + 1 &&
-      currentQuestionNr !== TOTAL_QUESTIONS - 1 ? (
-        <button className="next" onClick={nextQuestion}>
-          Next
-        </button>
-      ) : null}
-    </div>
+    <>
+      <GlobalStyle />
+      <Wrapper>
+        <h1>Trivial Quizzz</h1>
+        {gameOver || userAnswers.length === TOTAL_QUESTIONS ? (
+          <button className="start" onClick={startTrivia}>
+            Start
+          </button>
+        ) : null}
+        {!gameOver && <p className="score">Score:{score}</p>}
+        {loading && <p>Loading Questions...</p>}
+        {!loading && !gameOver && (
+          <QuestionCard
+            questionNr={currentQuestionNr + 1}
+            totalQuestions={TOTAL_QUESTIONS}
+            question={questions[currentQuestionNr].question}
+            answers={questions[currentQuestionNr].answers} //correct_answer + incorrect_answers
+            userAnswer={
+              userAnswers ? userAnswers[currentQuestionNr] : undefined
+            }
+            callback={checkAnswer}
+          />
+        )}
+        {!gameOver &&
+        !loading &&
+        userAnswers.length === currentQuestionNr + 1 &&
+        currentQuestionNr !== TOTAL_QUESTIONS - 1 ? (
+          <button className="next" onClick={nextQuestion}>
+            Next
+          </button>
+        ) : null}
+      </Wrapper>
+    </>
   );
 };
 

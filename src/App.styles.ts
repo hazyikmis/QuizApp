@@ -67,4 +67,11 @@ export const Wrapper = styled.div`
   .start {
     max-width: 200px;
   }
+
+  .bottomright {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+  }
 `;

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/QuizApp/static/js/main.bdb4fe14.chunk.js",
+    "main.js.map": "/QuizApp/static/js/main.bdb4fe14.chunk.js.map",
+    "runtime-main.js": "/QuizApp/static/js/runtime-main.7d9ee554.js",
+    "runtime-main.js.map": "/QuizApp/static/js/runtime-main.7d9ee554.js.map",
+    "static/js/2.b5e93213.chunk.js": "/QuizApp/static/js/2.b5e93213.chunk.js",
+    "static/js/2.b5e93213.chunk.js.map": "/QuizApp/static/js/2.b5e93213.chunk.js.map",
+    "index.html": "/QuizApp/index.html",
+    "precache-manifest.2f3d80a42724c7aefce34c390578cad5.js": "/QuizApp/precache-manifest.2f3d80a42724c7aefce34c390578cad5.js",
+    "service-worker.js": "/QuizApp/service-worker.js",
+    "static/js/2.b5e93213.chunk.js.LICENSE.txt": "/QuizApp/static/js/2.b5e93213.chunk.js.LICENSE.txt",
+    "static/media/jonas-denil.jpg": "/QuizApp/static/media/jonas-denil.b14204db.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d9ee554.js",
+    "static/js/2.b5e93213.chunk.js",
+    "static/js/main.bdb4fe14.chunk.js"
+  ]
+}

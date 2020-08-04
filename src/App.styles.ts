@@ -46,10 +46,16 @@ export const Wrapper = styled.div`
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     filter: drop-shadow(2px 2px #006aaa);
-    font-size: 70px;
-    font-weight: 400;
     text-align: center;
     margin: 20px;
+    font-size: 70px;
+    font-weight: 400;
+
+    @media screen and (max-width: 600px) {
+      margin: 10px;
+      font-size: 40px;
+      font-weight: 200;
+    }
   }
 
   .start,

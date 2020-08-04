@@ -51,7 +51,7 @@ export const Wrapper = styled.div`
     font-size: 70px;
     font-weight: 400;
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
       margin: 10px;
       font-size: 40px;
       font-weight: 200;
